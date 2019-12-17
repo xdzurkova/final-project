@@ -5,6 +5,8 @@ function [x,y]=analyzuj_vlastnosti(cit,men)
         else 
             x=('System je striktne rydzi.');
         end
+    g = tf(cit,men);
+    step(g)
     else
         x=('System nie je fyzikalne realizovatelny!');
     end
