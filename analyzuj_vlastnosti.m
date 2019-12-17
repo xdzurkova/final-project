@@ -20,6 +20,12 @@ function [x,y]=analyzuj_vlastnosti(cit,men)
     else
         y=('System je nestabilny.');
     end
+    c = imag(r)~= 0;
+   if sum(c)>0
+       disp('System je aperiodicky.')
+   else
+       disp('System je periodicky.')
+   end
 end
 
 

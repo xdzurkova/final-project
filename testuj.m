@@ -1,5 +1,5 @@
 clc;clear;close all;
-cit1=[1,2,3];
+cit1=[25,2,3];
 men1=poly([-1 -2 0]);
 cit2=[1,2];
 men2=[1,2,1];
