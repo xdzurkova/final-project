@@ -9,9 +9,14 @@ function [x,y]=analyzuj_vlastnosti(cit,men)
         x=('System nie je fyzikalne realizovatelny!');
     end
     r=roots(men);
-    a=r<0;
+    a=[r<=0];
     if length(r)==sum(a)
-        y=('System je stabilny.');
+        a1=[r<0];
+        if length(r)==sum(a1)
+            y=('System je stabilny.');
+        else
+            y=('System je na hranici stabilny.');
+        end
     else
         y=('System je nestabilny.');
     end
